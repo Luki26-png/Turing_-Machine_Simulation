@@ -2,20 +2,37 @@
 <html>
     <head>
         <title>Turing Machine Project</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h2>Project Teori Bahasa Formal dan Otomata</h2>
-        <h3>Kelompok 5</h3>
-        <h4>L = ab*b</h4>
-        <form>
-            <label for="input_string">Masukkan Input String &Sigma;={a,b}:</label><br>
-            <input type="text" id="input_string" name="input_string"><br>
-            <button type="button" onclick="main()">Submit</button>
-        </form>
+        <div id="main-container">
+            <div id="title">
+                <h1>TURING MACHINE SIMULATION</h1>
+                <h2>L = ab*a</h2>
+            </div>
+            <form>
+                <label for="input_string">Masukkan Input String &Sigma;={a,b}:</label><br>
+                <input type="text" id="input_string" name="input_string"><br>
+                <button type="button" onclick="main()">Submit</button>
+            </form>
 
-        <div id="result">
-            <table id="result-row"></table>
+            <div id="result">
+                <table id="result-table">
+                    <tr id="head">
+                        <td id="head-arrow" colspan="3">
+                            <div class="arrow-down"></div>
+                        </td>
+                    </tr>
+                    <tr id="tape">
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </div>
         </div>
 
         <script src="main.js"></script>

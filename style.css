@@ -1,0 +1,22 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
+}
+
+/* create and arrow*/
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid black;
+}
+
+table, th, td{
+    border: 1px solid black;
+}
+

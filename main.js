@@ -1,22 +1,19 @@
 function main() {
     let input = document.getElementById("input_string").value;
     let inputLength = input.length;
-    let resultRow = document.getElementById("result-row");
+    let tape = document.getElementById("tape");
+    let headArrow = document.getElementById("head-arrow");
 
-  // Clear the existing table
-    resultRow.innerHTML = "";
+    //change arrow colspan
+    headArrow.colSpan = inputLength;
 
-  // Create a new row
-    let row = document.createElement("tr");
-
-  // Loop through the input string and create a new cell for each character
+    // Clear the existing table
+    tape.innerHTML = "";
+    //put string into tape
     for (let i = 0; i < inputLength; i++) {
         let cell = document.createElement("td");
         cell.textContent = input[i];
-        row.appendChild(cell);
+        tape.appendChild(cell);
     }
-
-  // Append the row to the table
-    resultRow.appendChild(row);
 }
 
