@@ -9,18 +9,20 @@
     </head>
     <body>
         <div id="main-container">
+
             <div id="title">
                 <h1>TURING MACHINE SIMULATION</h1>
                 <h2>L = ab*a</h2>
             </div>
+
             <form>
                 <label for="input_string">Masukkan Input String &Sigma;={a,b}:</label><br>
                 <input type="text" id="input_string" name="input_string"><br>
-                <button type="button" onclick="main()">Submit</button>
+                <button type="button" onclick="putToTape()">Submit</button>
             </form>
 
-            <div id="result">
-                <table id="result-table">
+            <div id="turing-machine">
+                <table>
                     <tr id="head">
                         <td id="head-arrow" colspan="3">
                             <div class="arrow-down"></div>
@@ -33,6 +35,18 @@
                     </tr>
                 </table>
             </div>
+
+            <div id="process-and-result">
+                <div id="process">
+                    <p>A --> a, b</p>
+                    <button type="button" onclick="simulate()">step</button>
+                </div>
+
+                <div id="result">
+                    <p>Input Accepted</p>
+                </div>
+            </div>
+
         </div>
 
         <script src="main.js"></script>

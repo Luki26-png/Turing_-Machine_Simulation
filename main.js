@@ -1,4 +1,4 @@
-function main() {
+function putToTape() {
     let input = document.getElementById("input_string").value;
     let inputLength = input.length;
     let tape = document.getElementById("tape");
@@ -15,5 +15,9 @@ function main() {
         cell.textContent = input[i];
         tape.appendChild(cell);
     }
+}
+
+function simulate(){
+
 }
 
