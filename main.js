@@ -15,6 +15,9 @@ function putToTape() {
         cell.textContent = input[i];
         tape.appendChild(cell);
     }
+
+    //display #process-and-result from none
+    document.getElementById('process-and-result').style.display = "flex";
 }
 
 function simulate(){

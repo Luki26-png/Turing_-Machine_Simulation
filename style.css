@@ -17,7 +17,6 @@
 
 
 #background-container{
-    border: 1px solid white;
     background-image: url("image/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -32,6 +31,7 @@
     border: 1px solid white;
     min-height: 85vh;
     min-width: 85vw;
+    max-width: 85vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,10 +46,6 @@
     display: flex;
     flex-direction: column;
 
-}
-
-#process-and-result{
-    border: 1px solid white;
 }
 
 #title > #main-title{
@@ -95,7 +91,7 @@ form > button{
     border: 1px solid white;
     font-size: 1.1em;
     font-weight: bold;
-    padding: 8px;
+    padding: 8px 15px;
 }
 
 #turing-container{
@@ -118,5 +114,38 @@ form > button{
     text-align: center;
 }
 
+#process-and-result{
+    /*border: 1px solid white;*/
+    min-width: 30%;
+    display: none;
+    /*display: flex;*/
+    flex-direction: column;
+    align-items: center;
+}
 
+#process{
+    /*border: 1px solid white;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#process > #operation{
+    font-size: 1.1em;
+    padding: 8px 1px;
+}
+
+#process > #process-button{
+    background-color: transparent;
+    border: 1px solid white;
+    font-size: 1.1em;
+    padding: 2px 14px;
+}
+
+#result{
+    display: none;
+    border: 1px solid white;
+    padding: 8px 1px;
+    font-size: 1.3em;
+}
 
