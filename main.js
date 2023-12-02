@@ -1,16 +1,19 @@
 function putToTape() {
     let input = document.getElementById("input_string").value;
+    //add blank to input
+    input += "---";
     let inputLength = input.length;
+
     let tape = document.getElementById("tape");
     let headArrow = document.getElementById("head-arrow");
 
-    //change arrow colspan
+    //change arrow colspan to fit the table
     headArrow.colSpan = inputLength;
 
     // Clear the existing table
     tape.innerHTML = "";
     //put string into tape
-    for (let i = 0; i < inputLength; i++) {
+    for (let i = 0; i < inputLength; i++){
         let cell = document.createElement("td");
         cell.textContent = input[i];
         tape.appendChild(cell);

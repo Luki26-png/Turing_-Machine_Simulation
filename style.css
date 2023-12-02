@@ -70,9 +70,10 @@ form{
     align-items: center;
 }
 
-form > label {
-    /*border: 1px solid white;*/
-}
+/*form > label {
+    border: 1px solid white;
+}*/
+
 form > label > span{
     padding: 0%;
     font-size: 1.2em;
