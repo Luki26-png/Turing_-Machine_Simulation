@@ -10,9 +10,9 @@
 .arrow-down {
     width: 0;
     height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid white;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 7px solid white;
 }
 
 
@@ -106,7 +106,8 @@ form > button{
 
 #turing-machine, tr, td{
     border: 1px solid white;
-    border-collapse: collapse;
+    /*border-collapse: collapse;*/
+    padding: 5px;
 }
 
 #turing-machine{
@@ -114,6 +115,8 @@ form > button{
     font-size: 1.7em;
     text-align: center;
 }
+
+
 
 #process-and-result{
     /*border: 1px solid white;*/

@@ -5,12 +5,28 @@ function putToTape() {
     let inputLength = input.length;
 
     let tape = document.getElementById("tape");
-    let headArrow = document.getElementById("head-arrow");
+    let head = document.getElementById("head");
 
-    //change arrow colspan to fit the table
-    headArrow.colSpan = inputLength;
+    //create an arrow as a head
+    let arrow = document.createElement("div");
+    arrow.setAttribute("class", "arrow-down");
+    //clear the head row
+    head.innerHTML = "";
+    //put new arrow to turing machine
+    for (let i = 0; i < inputLength; i++){
+        if(i == 0){
+            let cell = document.createElement("td");
+            cell.appendChild(arrow);
+            head.appendChild(cell);
+        }else{
+            let cell = document.createElement("td");
+            cell.textContent = " ";
+            head.appendChild(cell);
+        }
+    }
+        
 
-    // Clear the existing table
+    // Clear the tape row
     tape.innerHTML = "";
     //put string into tape
     for (let i = 0; i < inputLength; i++){
@@ -23,7 +39,7 @@ function putToTape() {
     document.getElementById('process-and-result').style.display = "flex";
 }
 
-function simulate(){
+function calculate(){
 
 }
 
