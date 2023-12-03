@@ -20,15 +20,22 @@ const transition = {
         "$":["E", "$", "R"]
     },
     "E":{ 
-        "a":[],
-        "b":[],
-        "-":[]
+        "a":["F", "0", "R"],
+        "b":["Reject", "b", "R"],
+        "-":["Reject", "-", "R"]
     },
     "F":{ 
-        "a":[],
-        "b":[],
-        "-":[]
-    }
+        "a":["G", "0", "R"],
+        "b":["F", "1", "R"],
+        "-":["Reject", "-", "R"]
+    },
+    "G":{ 
+        "a":["Reject", "a", "R"],
+        "b":["Reject", "b", "R"],
+        "-":["Accept", "-", "R"]
+    },
+    "Accept":[],
+    "Reject":[]
 };
 
 function calculate(){
@@ -78,6 +85,16 @@ function calculate(){
         //head move to the left
         headChild[headCurrentPosition - 1].appendChild(arrow);
         headChild[headCurrentPosition].innerHTML = " ";
+    }
+
+    if((nextState == "Accept") || (nextState == "Reject") ){
+        //get rid of the button
+        let processButton = document.getElementById("process-button");
+        processButton.style.display = "none";
+        //show result message
+        let result = document.getElementById("result");
+        result.innerHTML = "The String is " + nextState + "ed";
+        result.style.display = "flex";
     }
 
     //print operasi apa yang telah dilakukan
