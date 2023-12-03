@@ -7,6 +7,9 @@ function putToTape() {
     let tape = document.getElementById("tape");
     let head = document.getElementById("head");
 
+    //reset head state to A
+    head.setAttribute("class","A");
+
     //create an arrow as a head
     let arrow = document.createElement("div");
     arrow.setAttribute("class", "arrow-down");

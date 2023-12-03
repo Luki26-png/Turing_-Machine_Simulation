@@ -32,13 +32,32 @@ const transition = {
 };
 
 function calculate(){
+    //get head
     let head = document.getElementById("head");
     let headChild = head.getElementsByTagName("td");
     
+    //get tape
+    let tape = document.getElementById("tape");
+    let tapeContent = tape.getElementsByTagName("td");
+
+    //get current state
+    let currentState = head.getAttribute("class");
     //create new arrow
     let arrow = document.createElement("div");
     arrow.setAttribute("class", "arrow-down");
 
-    headChild[1].appendChild(arrow);
-    headChild[0].innerHTML = " ";
+    //get head current position
+    let headCurrentPosition = 0;
+    for(let i = 0; i < headChild.length; i++){
+        if(headChild[i].innerHTML !== " "){
+            headCurrentPosition = i;
+            break;
+        }
+    }
+
+    //head move to the right
+    headChild[headCurrentPosition+1].appendChild(arrow);
+    headChild[headCurrentPosition].innerHTML = " ";
+    //write into tape
+    tapeContent[headCurrentPosition].innerHTML = currentState;
 }
