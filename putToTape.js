@@ -6,10 +6,7 @@ function putToTape() {
 
     let tape = document.getElementById("tape");
     let head = document.getElementById("head");
-
-    //reset head state to A
-    head.setAttribute("class","A");
-
+    
     //create an arrow as a head
     let arrow = document.createElement("div");
     arrow.setAttribute("class", "arrow-down");
@@ -38,8 +35,12 @@ function putToTape() {
         tape.appendChild(cell);
     }
 
+    //reset head state to A
+    head.setAttribute("class","A");
     //display #process-and-result from none
     document.getElementById('process-and-result').style.display = "flex";
+    //reset hasil operation
+    document.getElementById("operation").innerHTML = "( ) --> ( )";
 }
 
 

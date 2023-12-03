@@ -79,6 +79,12 @@ function calculate(){
         headChild[headCurrentPosition - 1].appendChild(arrow);
         headChild[headCurrentPosition].innerHTML = " ";
     }
+
+    //print operasi apa yang telah dilakukan
+    let operation = document.getElementById("operation");
+    operation.innerHTML = "("+ currentState + ", " + currentAlphabet + ") "+
+                            "-->" + "(" + nextState + "," + writeToCell +
+                            ", " +headMovement + ")";
     
     
 }
