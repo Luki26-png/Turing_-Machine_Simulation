@@ -174,8 +174,10 @@ form > button{
 
 form > button:hover{
     color: white;
+    cursor:pointer;
 }
 
 #process > #process-button:hover{
     color: white;
+    cursor:pointer;
 }
