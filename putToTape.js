@@ -41,9 +41,10 @@ function putToTape() {
     document.getElementById('process-and-result').style.display = "flex";
     //reset hasil operation
     document.getElementById("operation").innerHTML = "( ) --> ( )";
-    //show the button
+    //show the operation button
     let processButton = document.getElementById("process-button");
     processButton.style.display = "flex";
+    processButton.innerHTML = "click to do one operation";
     //hide result message
     let result = document.getElementById("result");
     result.style.display = "none";

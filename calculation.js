@@ -103,5 +103,8 @@ function calculate(){
                             "-->" + "(" + nextState + "," + writeToCell +
                             ", " +headMovement + ")";
     
+    //change process button text
+    let processButton = document.getElementById("process-button");
+    processButton.innerHTML = "click again";
     
 }
