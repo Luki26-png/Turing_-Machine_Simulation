@@ -5,3 +5,6 @@ Dibuat oleh kelompok 5:
 - Muhammad Rifqi
 - Rizsky Parsadanta
 - Grayesi
+
+Berikut merupakan Finite State Machine yang digunakan oleh Mesin Turing dalam Project ini
+![control portion FSM](image/FSM.jpg)
