@@ -39,13 +39,11 @@ function calculate(){
     //get tape
     let tape = document.getElementById("tape");
     let tapeContent = tape.getElementsByTagName("td");
-
-    //get current state
-    let currentState = head.getAttribute("class");
     //create new arrow
     let arrow = document.createElement("div");
     arrow.setAttribute("class", "arrow-down");
 
+    
     //get head current position
     let headCurrentPosition = 0;
     for(let i = 0; i < headChild.length; i++){
@@ -55,9 +53,32 @@ function calculate(){
         }
     }
 
-    //head move to the right
-    headChild[headCurrentPosition+1].appendChild(arrow);
-    headChild[headCurrentPosition].innerHTML = " ";
+    //get current state
+    let currentState = head.getAttribute("class");
+    //get current cell alphabet
+    let currentAlphabet = tapeContent[headCurrentPosition].innerHTML;
+
+    //transition result
+    let nextState = transition[currentState][currentAlphabet][0];
+    let writeToCell = transition[currentState][currentAlphabet][1];
+    let headMovement = transition[currentState][currentAlphabet][2];
+
+
+    //ubah state
+    head.setAttribute("class",nextState);
     //write into tape
-    tapeContent[headCurrentPosition].innerHTML = currentState;
+    tapeContent[headCurrentPosition].innerHTML = writeToCell;
+
+    //head movement
+    if(headMovement == "R"){
+        //head move to the right
+        headChild[headCurrentPosition + 1].appendChild(arrow);
+        headChild[headCurrentPosition].innerHTML = " ";
+    }else{
+        //head move to the left
+        headChild[headCurrentPosition - 1].appendChild(arrow);
+        headChild[headCurrentPosition].innerHTML = " ";
+    }
+    
+    
 }
