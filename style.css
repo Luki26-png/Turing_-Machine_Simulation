@@ -28,7 +28,7 @@
 }
 
 #main-container{
-    border: 4px solid white;
+    border: 3px solid #B6FFFA;
     border-radius: 20px;
     min-height: 85vh;
     min-width: 85vw;
@@ -50,6 +50,7 @@
 }
 
 #title > #main-title{
+    color: white;
     font-size: 3em;
     font-weight:bold;
     /*border: 1px solid white;*/
@@ -84,14 +85,16 @@ form > label > span{
 form > #input_string{
     min-width: 80%;
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid #B6FFFA;
     font-size: 1.3em;
     padding: 2px;
+    text-align: center;
 }
 
 form > button{
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid #B6FFFA;
+    color: #B6FFFA;
     border-radius: 6px;
     font-size: 1.1em;
     font-weight: 500;
@@ -148,11 +151,13 @@ form > button{
 #process > .operation{
     font-size: 1.1em;
     padding: 8px 1px;
+    font-weight: 500;
 }
 
 #process > #process-button{
+    color: #B6FFFA;
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid #B6FFFA;
     border-radius: 6px;
     font-size: 1.1em;
     padding: 6px 14px;
@@ -160,9 +165,17 @@ form > button{
 
 #result{
     display: none;
+    color: #B6FFFA;
     /*border: 1px solid white;*/
     padding: 8px 1px;
     font-size: 1.3em;
     font-weight: bold;
 }
 
+form > button:hover{
+    color: white;
+}
+
+#process > #process-button:hover{
+    color: white;
+}
