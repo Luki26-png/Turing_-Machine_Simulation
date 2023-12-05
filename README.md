@@ -9,3 +9,5 @@ Dibuat oleh kelompok 5:
 Berikut merupakan Finite State Machine yang digunakan oleh Mesin Turing dalam Project ini :
 
 ![control portion FSM](image/FSM.jpg) 
+
+simulasi dari mesin turing tersebut dapat dilihat pada https://luki26-png.github.io/Turing_-Machine_Simulation/
