@@ -39,7 +39,7 @@ const transition = {
 };
 
 function simulation(){
-    const animating = setInterval(calculate, 1000);
+    const animating = setInterval(calculate, 1500);
 }
 
 function calculate(){
@@ -79,6 +79,7 @@ function calculate(){
     head.setAttribute("class",nextState);
     //write into tape
     tapeContent[headCurrentPosition].innerHTML = writeToCell;
+    tapeContent[headCurrentPosition].style.color = '#B6FFFA';
 
     //head movement
     if(headMovement == "R"){
