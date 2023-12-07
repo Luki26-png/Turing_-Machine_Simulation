@@ -44,7 +44,7 @@ function putToTape() {
     //show the operation button
     let processButton = document.getElementById("process-button");
     processButton.style.display = "flex";
-    processButton.innerHTML = "click to do one operation";
+    processButton.innerHTML = "Simulation";
     //hide result message
     let result = document.getElementById("result");
     result.style.display = "none";

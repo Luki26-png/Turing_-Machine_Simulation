@@ -38,6 +38,10 @@ const transition = {
     "Reject":[]
 };
 
+function simulation(){
+    const animating = setInterval(calculate, 1000);
+}
+
 function calculate(){
     //get head
     let head = document.getElementById("head");
@@ -88,9 +92,10 @@ function calculate(){
     }
 
     if((nextState == "Accept") || (nextState == "Reject") ){
+        //assign value to finalState
         //get rid of the button
-        let processButton = document.getElementById("process-button");
-        processButton.style.display = "none";
+        //let processButton = document.getElementById("process-button");
+        //processButton.style.display = "none";
         //show result message
         let result = document.getElementById("result");
         result.innerHTML = "The String is " + nextState + "ed";
@@ -105,6 +110,11 @@ function calculate(){
     
     //change process button text
     let processButton = document.getElementById("process-button");
-    processButton.innerHTML = "click again";
+    processButton.style.display = "none";
+
+    //function so stop the animation
+    if((currentState == "Accept") || (currentState == "Reject") ){
+        clearInterval(animating);
+    }
     
 }
