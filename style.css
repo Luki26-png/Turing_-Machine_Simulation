@@ -182,3 +182,15 @@ form > button:hover{
     color: white;
     cursor:pointer;
 }
+
+form > button:active{
+    background-color: #00524c;
+    color: white;
+    cursor:pointer;
+}
+
+#process > #process-button:active{
+    background-color: #00524c;
+    color: white;
+    cursor:pointer;
+}
