@@ -1,5 +1,14 @@
 function putToTape() {
     let input = document.getElementById("input_string").value;
+    //evalueate if the input only contain symbol 'a' and 'b'
+    const symbol = ["a", "b"];
+    for(let char of input){
+        if (!symbol.includes(char)) {
+            window.alert("symbol yang bisa dimasukkan hanya a dan b");
+            return;
+            break;
+        }
+    }
     //add blank to input
     input += "---";
     let inputLength = input.length;
